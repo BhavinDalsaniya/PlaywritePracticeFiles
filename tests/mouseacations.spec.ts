@@ -4,8 +4,10 @@ test('Mouse hover',async ({page})=>{
 
     await page.goto('https://testautomationpractice.blogspot.com/');
 
-    const pointme=page.locator('.dropbtn');
-    await pointme.hover();
+    // const pointme=page.locator('.dropbtn');
+    // await pointme.hover();
+
+    const pointme=await page.locator('.dropbtn').hover();
 
     const laptops=page.locator('.dropdown-content a:nth-child(2)');
     await laptops.hover();

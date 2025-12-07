@@ -25,12 +25,16 @@ test.describe('Group1', () => {
 test.describe('Group2', () => {
 
 
-    test('@sanity Aecond Grouping', async ({ page }) => {
+    test('Aecond Grouping', async ({ page }) => {
 
         await page.goto("https://practice.expandtesting.com/dynamic-table");
         
-        test.slow()
+       
         console.log('this is inside Second test')
+
+        await page.screenshot({ path: 'second-grouping.png', fullPage: true });
+
+        await page.waitForTimeout(3000)
     });
 
     test('Third Grouping', ({ page }) => {

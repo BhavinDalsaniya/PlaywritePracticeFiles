@@ -18,7 +18,7 @@ const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -35,6 +35,7 @@ export default defineConfig({
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    screenshot: 'on',
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
@@ -43,6 +44,9 @@ export default defineConfig({
 
     // testIdAttribute:'data-pw' // Configured data-testid
   },
+
+  //this will save automatic all test result
+  globalTeardown: require.resolve('./global-teardown.ts'),
 
   /* Configure projects for major browsers */
   projects: [

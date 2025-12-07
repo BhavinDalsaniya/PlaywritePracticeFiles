@@ -2,7 +2,11 @@
   "name": "pwdemos",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+
+  "scripts": {
+    "test:allure": "node generate-allure.js"
+  },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
