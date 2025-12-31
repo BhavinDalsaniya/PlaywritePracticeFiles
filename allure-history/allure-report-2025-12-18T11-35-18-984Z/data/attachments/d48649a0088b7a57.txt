@@ -1,2 +1,0 @@
-urlofdelete https://restful-booker.herokuapp.com/booking/2468
-responsecode 201

@@ -1,2 +1,0 @@
-urlofdelete https://restful-booker.herokuapp.com/booking/{bookingID}
-responsecode 405
